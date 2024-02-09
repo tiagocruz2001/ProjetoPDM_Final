@@ -1,0 +1,31 @@
+<!-- res/drawable/custom_background_image.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White Border (Circular) -->
+    <item android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Inner Circle (Main Blue Background) -->
+    <item android:top="4dp" android:right="4dp" android:bottom="4dp" android:left="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#3498db"
+                android:centerColor="#2196F3"
+                android:endColor="#2980b9"
+                android:angle="135"/>
+        </shape>
+    </item>
+
+    <!-- Inner Gradient for Shadow Effect (Circle) -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#33000000"
+                android:centerColor="#22000000"
+                android:endColor="#11000000"
+                android:angle="270" />
+        </shape>
+    </item>
+</layer-list>

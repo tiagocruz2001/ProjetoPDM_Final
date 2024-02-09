@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProjetoPDM</string>
+    <string-array name="estados_array">
+        <item>Aberto</item>
+        <item>Concluído</item>
+    </string-array>
+</resources>

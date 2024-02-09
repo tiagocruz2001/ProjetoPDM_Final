@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/voltar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgCamera"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imgCamera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/baseline_add_a_photo_24"
+        android:background="#3498db"
+        android:contentDescription="Anexar Fotografia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Data:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+
+        <EditText
+            android:id="@+id/editTextDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Insira a Descrição"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="#7F7F7F"
+            android:textColor="#000000"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:drawablePadding="12dp"
+            android:padding="12dp"
+            android:paddingTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:maxLength="400"
+            app:layout_constraintTop_toBottomOf="@+id/textViewData" />
+
+        <!-- Adicione o TextView abaixo da EditText -->
+
+
+        <TextView
+            android:id="@+id/textViewCharacterCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="25dp"
+            android:text="400 / 400"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDescricao" />
+
+        <Button
+        android:id="@+id/buttonSubmeterTicket"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Submeter Ticket"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescricao"
+        android:textSize="18sp" />
+
+    <!-- "Textbox" para informações -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_background"
+        android:padding="16dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubmeterTicket">
+
+        <!-- Título "Importante" centralizado -->
+        <TextView
+            android:id="@+id/tituloImportante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:gravity="center"
+            android:text="Informações:"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Texto informativo -->
+        <TextView
+            android:id="@+id/informacoesTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloImportante"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="Clique na imagem para tirar uma foto ao incidente, e submeta para nos ser atribuido o ticket, ao submetido, o ticket vais estar com aberto e quando resolvido vai conseguir vê-lo no seu histórico já como concluído, a primeira palavra da sua descrição vai ser o título do seu ticket para assim conseguir fazer a pesquisa no histórico. Obrigado!"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

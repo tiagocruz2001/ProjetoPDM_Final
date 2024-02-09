@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/voltar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/custom_background_image"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_parking_logo"
+            android:transitionName="logoTransition" />
+
+        <!-- Adição do TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Editar Perfil"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/editTextNome"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:maxLength="20"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#757575"
+            android:visibility="invisible"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:maxLength="60"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#757575"
+            android:visibility="invisible"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextNif"
+            android:drawableStart="@drawable/nif"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:maxLength="9"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#757575"
+            android:visibility="invisible"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="#757575"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"/>
+
+            <ImageButton
+                android:id="@+id/btnMostrarSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/verpassword"
+                android:layout_alignBottom="@id/editTextPassword"
+                android:layout_alignEnd="@id/editTextPassword"
+                android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+        </RelativeLayout>
+
+
+
+        <EditText
+            android:id="@+id/editTextConfirmarPassword"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:hint="Confirmar Password"
+            android:inputType="textPassword"
+            android:textColorHint="#757575"
+            android:background="@drawable/edit_text_background"
+            android:visibility="invisible"
+            android:padding="10dp"/>
+
+
+        <EditText
+            android:id="@+id/editTextContacto"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="16dp"
+            android:maxLength="12"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="phone"
+            android:textColorHint="#757575"
+            android:visibility="invisible"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="Editar"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</RelativeLayout>

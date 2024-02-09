@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_parking_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"/>
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registo"
+        android:textSize="36sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageViewLogo"
+        android:layout_marginTop="12dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1" />
+
+    <EditText
+
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:inputType="text"
+        android:background="@drawable/text_backgorund"
+        android:hint="Nome de Utilizador"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:maxLength="20"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_backgorund"
+        android:hint="Email"
+        android:maxLength="60"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_backgorund"
+        android:hint="Palavra-passe"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="12dp"
+        android:inputType="textPassword"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Novos campos para contato e NIF -->
+    <EditText
+        android:id="@+id/editTextContact"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_backgorund"
+        android:hint="Contacto"
+        android:maxLength="12"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="12dp"
+        android:inputType="phone"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextNIF"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/text_backgorund"
+        android:hint="NIF"
+        android:maxLength="9"
+        android:textColor="#000000"
+        android:textColorHint="#757575"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableStart="@drawable/nif"
+        android:drawablePadding="12dp"
+        android:inputType="number"
+        android:layout_below="@+id/editTextContact"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Registar"
+        android:textColor="#ffffff"
+        android:backgroundTint="#00AAFF"
+        android:layout_below="@+id/editTextNIF"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Já tem uma conta? Faça login aqui."
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/buttonRegister"
+        android:layout_marginTop="16dp"
+
+        android:textColor="#ffffff"
+        android:onClick="goToLogin"/>
+
+
+
+</RelativeLayout>

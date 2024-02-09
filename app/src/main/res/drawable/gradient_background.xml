@@ -1,0 +1,27 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient Background -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#3498db"
+                android:endColor="#2980b9"
+                android:type="linear"/>
+        </shape>
+    </item>
+
+    <!-- Diagonal Gradient Overlay -->
+    <item>
+        <rotate
+            android:fromDegrees="45">
+            <shape
+                android:shape="rectangle">
+                <gradient
+                    android:startColor="#3498db"
+                    android:centerColor="#2980b9"
+                    android:endColor="#3498db"
+                    android:angle="45"
+                    android:type="linear"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#3498db"
+        android:endColor="#2980b9"
+        android:angle="135"/>
+    <corners android:radius="8dp"/> <!-- Raio dos cantos para uma borda arredondada -->
+    <stroke android:color="#ffffff" android:width="2dp"/> <!-- Cor e largura da borda -->
+</shape>
